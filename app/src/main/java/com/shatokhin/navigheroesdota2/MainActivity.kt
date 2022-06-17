@@ -1,27 +1,19 @@
-package com.shatokhin.dbfileheroesdota2
+package com.shatokhin.navigheroesdota2
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import com.shatokhin.dbfileheroesdota2.data.models.HeroJson
-import com.shatokhin.dbfileheroesdota2.databinding.ActivityMainBinding
-import com.shatokhin.dbfileheroesdota2.domain.models.HeroParcelable
-import com.shatokhin.dbfileheroesdota2.presentation.adapters.AdapterRvHeroes
-import com.shatokhin.dbfileheroesdota2.presentation.viewmodels.ViewModelListAllHeroes
-import com.shatokhin.dbfileheroesdota2.presentation.viewmodels.ViewModelListAllHeroesFactory
-import com.shatokhin.dbfileheroesdota2.utilites.NAME_FILE_HEROES
-import com.shatokhin.dbfileheroesdota2.utilites.TAG_FOR_LOGCAT
-import java.io.BufferedReader
-import java.io.FileNotFoundException
-import java.io.IOException
-import java.io.InputStreamReader
-import kotlin.math.log
+import com.shatokhin.navigheroesdota2.data.models.HeroJson
+import com.shatokhin.navigheroesdota2.databinding.ActivityMainBinding
+import com.shatokhin.navigheroesdota2.domain.models.HeroParcelable
+import com.shatokhin.navigheroesdota2.presentation.adapters.AdapterRvHeroes
+import com.shatokhin.navigheroesdota2.presentation.viewmodels.ViewModelListAllHeroes
+import com.shatokhin.navigheroesdota2.presentation.viewmodels.ViewModelListAllHeroesFactory
 
 class MainActivity : AppCompatActivity() {
     companion object {

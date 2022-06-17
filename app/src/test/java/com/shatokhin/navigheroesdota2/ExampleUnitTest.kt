@@ -1,4 +1,4 @@
-package com.shatokhin.dbfileheroesdota2
+package com.shatokhin.navigheroesdota2
 
 import org.junit.Test
 

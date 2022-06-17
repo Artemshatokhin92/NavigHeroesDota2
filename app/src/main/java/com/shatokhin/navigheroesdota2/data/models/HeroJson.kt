@@ -1,4 +1,4 @@
-package com.shatokhin.dbfileheroesdota2.data.models
+package com.shatokhin.navigheroesdota2.data.models
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

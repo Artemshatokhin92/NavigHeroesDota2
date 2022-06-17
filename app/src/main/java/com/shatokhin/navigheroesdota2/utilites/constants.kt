@@ -1,4 +1,4 @@
-package com.shatokhin.dbfileheroesdota2.utilites
+package com.shatokhin.navigheroesdota2.utilites
 
 const val TAG_FOR_LOGCAT = "!@#$"
 const val BASE_URL = "https://api.opendota.com"

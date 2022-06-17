@@ -1,7 +1,7 @@
-package com.shatokhin.dbfileheroesdota2.data.networkstorage
+package com.shatokhin.navigheroesdota2.data.networkstorage
 
 import android.util.Log
-import com.shatokhin.dbfileheroesdota2.utilites.TAG_FOR_LOGCAT
+import com.shatokhin.navigheroesdota2.utilites.TAG_FOR_LOGCAT
 import kotlinx.coroutines.delay
 import okhttp3.*
 import java.io.IOException

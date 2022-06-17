@@ -1,4 +1,4 @@
-package com.shatokhin.dbfileheroesdota2.domain.models
+package com.shatokhin.navigheroesdota2.domain.models
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

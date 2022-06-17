@@ -1,9 +1,9 @@
-package com.shatokhin.dbfileheroesdota2.data.repository
+package com.shatokhin.navigheroesdota2.data.repository
 
-import com.shatokhin.dbfileheroesdota2.data.localstorage.ManagerFileStorage
-import com.shatokhin.dbfileheroesdota2.data.models.HeroJson
-import com.shatokhin.dbfileheroesdota2.data.networkstorage.ManagerNetworkStorage
-import com.shatokhin.dbfileheroesdota2.domain.repository.Repository
+import com.shatokhin.navigheroesdota2.data.localstorage.ManagerFileStorage
+import com.shatokhin.navigheroesdota2.data.models.HeroJson
+import com.shatokhin.navigheroesdota2.data.networkstorage.ManagerNetworkStorage
+import com.shatokhin.navigheroesdota2.domain.repository.Repository
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types

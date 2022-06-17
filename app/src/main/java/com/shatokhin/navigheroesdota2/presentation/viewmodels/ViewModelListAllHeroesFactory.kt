@@ -1,12 +1,12 @@
-package com.shatokhin.dbfileheroesdota2.presentation.viewmodels
+package com.shatokhin.navigheroesdota2.presentation.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.shatokhin.dbfileheroesdota2.data.localstorage.ManagerFileStorage
-import com.shatokhin.dbfileheroesdota2.data.networkstorage.ManagerNetworkStorage
-import com.shatokhin.dbfileheroesdota2.data.repository.RepositoryImpl
-import com.shatokhin.dbfileheroesdota2.domain.usecase.UseCaseGetListAllHeroes
+import com.shatokhin.navigheroesdota2.data.localstorage.ManagerFileStorage
+import com.shatokhin.navigheroesdota2.data.networkstorage.ManagerNetworkStorage
+import com.shatokhin.navigheroesdota2.data.repository.RepositoryImpl
+import com.shatokhin.navigheroesdota2.domain.usecase.UseCaseGetListAllHeroes
 
 class ViewModelListAllHeroesFactory(appContext: Context): ViewModelProvider.Factory {
 

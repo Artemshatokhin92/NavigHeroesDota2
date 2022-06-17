@@ -1,12 +1,12 @@
-package com.shatokhin.dbfileheroesdota2
+package com.shatokhin.navigheroesdota2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import coil.load
-import com.shatokhin.dbfileheroesdota2.databinding.ActivityDetailsHeroBinding
-import com.shatokhin.dbfileheroesdota2.domain.models.HeroParcelable
-import com.shatokhin.dbfileheroesdota2.utilites.*
+import com.shatokhin.navigheroesdota2.databinding.ActivityDetailsHeroBinding
+import com.shatokhin.navigheroesdota2.domain.models.HeroParcelable
+import com.shatokhin.navigheroesdota2.utilites.*
 
 class DetailsHeroActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsHeroBinding

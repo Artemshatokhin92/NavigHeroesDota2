@@ -1,4 +1,4 @@
-package com.shatokhin.dbfileheroesdota2.presentation.adapters
+package com.shatokhin.navigheroesdota2.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.shatokhin.dbfileheroesdota2.R
-import com.shatokhin.dbfileheroesdota2.data.models.HeroJson
-import com.shatokhin.dbfileheroesdota2.utilites.BASE_URL
-import com.shatokhin.dbfileheroesdota2.utilites.PRIMARY_ATTR_AGILITY
-import com.shatokhin.dbfileheroesdota2.utilites.PRIMARY_ATTR_INTELLECT
-import com.shatokhin.dbfileheroesdota2.utilites.PRIMARY_ATTR_STRENGTH
+import com.shatokhin.navigheroesdota2.R
+import com.shatokhin.navigheroesdota2.data.models.HeroJson
+import com.shatokhin.navigheroesdota2.utilites.BASE_URL
+import com.shatokhin.navigheroesdota2.utilites.PRIMARY_ATTR_AGILITY
+import com.shatokhin.navigheroesdota2.utilites.PRIMARY_ATTR_INTELLECT
+import com.shatokhin.navigheroesdota2.utilites.PRIMARY_ATTR_STRENGTH
 
 class AdapterRvHeroes(private val clickListenerHero: ClickListenerHero): ListAdapter<HeroJson, AdapterRvHeroes.ViewHolderHero>(HeroesDiffCallback) {
 

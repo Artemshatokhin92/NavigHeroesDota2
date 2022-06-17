@@ -1,10 +1,10 @@
-package com.shatokhin.dbfileheroesdota2.data.localstorage
+package com.shatokhin.navigheroesdota2.data.localstorage
 
 import android.content.Context
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.shatokhin.dbfileheroesdota2.utilites.NAME_FILE_HEROES
-import com.shatokhin.dbfileheroesdota2.utilites.TAG_FOR_LOGCAT
+import com.shatokhin.navigheroesdota2.utilites.NAME_FILE_HEROES
+import com.shatokhin.navigheroesdota2.utilites.TAG_FOR_LOGCAT
 import java.io.BufferedReader
 import java.io.FileNotFoundException
 import java.io.IOException

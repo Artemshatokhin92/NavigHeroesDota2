@@ -1,11 +1,11 @@
-package com.shatokhin.dbfileheroesdota2.presentation.viewmodels
+package com.shatokhin.navigheroesdota2.presentation.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.shatokhin.dbfileheroesdota2.data.models.HeroJson
-import com.shatokhin.dbfileheroesdota2.domain.usecase.UseCaseGetListAllHeroes
+import com.shatokhin.navigheroesdota2.data.models.HeroJson
+import com.shatokhin.navigheroesdota2.domain.usecase.UseCaseGetListAllHeroes
 import kotlinx.coroutines.launch
 
 class ViewModelListAllHeroes(

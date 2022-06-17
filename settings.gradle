@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "DB File HeroesDota2"
+rootProject.name = "NavigHeroesDota2"
 include ':app'
