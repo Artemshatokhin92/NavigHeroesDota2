@@ -16,4 +16,11 @@ class HeroParcelable(
     val baseStrength: Int,
     val baseAgility: Int,
     val baseIntellect: Int
-    ): Parcelable
+    ): Parcelable {
+        fun getHealthString() = baseHealth.toString()
+        fun getManaString() = baseMana.toString()
+        fun getArmorString() = baseArmor.toString()
+        fun getStrengthString() = baseStrength.toString()
+        fun getAgilityString() = baseAgility.toString()
+        fun getIntellectString() = baseIntellect.toString()
+    }

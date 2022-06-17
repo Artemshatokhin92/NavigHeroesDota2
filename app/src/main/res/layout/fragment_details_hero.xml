@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="hero"
+            type="com.shatokhin.navigheroesdota2.domain.models.HeroParcelable" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +42,8 @@
             android:layout_margin="10dp"
             android:background="#54191919"
             android:padding="5dp"
-            android:text="Name Hero"
+            tools:text="Name Hero"
+            android:text="@{hero.name}"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/iconPrimaryAttr"
@@ -63,7 +66,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Health"
+                tools:text="Health"
+                android:text="@{hero.healthString}"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -84,7 +88,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Mana"
+                tools:text="Mana"
+                android:text="@{hero.manaString}"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -105,7 +110,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_for_value_characteristic_hero"
-            android:text="Melee"
+            tools:text="Melee"
+            android:text="@{hero.attackType}"
             android:textColor="@color/color_for_value_characteristic_hero"
             android:textSize="@dimen/size_text_characteristic_hero"
             app:layout_constraintBottom_toBottomOf="@id/tvTextAttackType"
@@ -128,7 +134,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_for_value_characteristic_hero"
-            android:text="Roles"
+            tools:text="Roles"
+            android:text="@{hero.roles.toString()}"
             android:textColor="@color/color_for_value_characteristic_hero"
             android:textSize="@dimen/size_text_characteristic_hero"
             app:layout_constraintBottom_toBottomOf="@id/tvTextRoles"
@@ -151,7 +158,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_for_value_characteristic_hero"
-            android:text="0.0"
+            tools:text="0.0"
+            android:text="@{hero.armorString}"
             android:textColor="@color/color_for_value_characteristic_hero"
             android:textSize="@dimen/size_text_characteristic_hero"
             app:layout_constraintBottom_toBottomOf="@id/tvTextBaseArmor"
@@ -174,7 +182,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_for_value_characteristic_hero"
-            android:text="0.0"
+            tools:text="0.0"
+            android:text="@{hero.strengthString}"
             android:textColor="@color/color_for_value_characteristic_hero"
             android:textSize="@dimen/size_text_characteristic_hero"
             app:layout_constraintBottom_toBottomOf="@id/tvTextBaseStrength"
@@ -197,7 +206,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_for_value_characteristic_hero"
-            android:text="0.0"
+            tools:text="0.0"
+            android:text="@{hero.agilityString}"
             android:textColor="@color/color_for_value_characteristic_hero"
             android:textSize="@dimen/size_text_characteristic_hero"
             app:layout_constraintBottom_toBottomOf="@id/tvTextBaseAgility"
@@ -220,7 +230,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_for_value_characteristic_hero"
-            android:text="0.0"
+            tools:text="0.0"
+            android:text="@{hero.intellectString}"
             android:textColor="@color/color_for_value_characteristic_hero"
             android:textSize="@dimen/size_text_characteristic_hero"
             app:layout_constraintBottom_toBottomOf="@id/tvTextBaseIntellect"

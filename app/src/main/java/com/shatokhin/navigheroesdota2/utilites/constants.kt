@@ -8,3 +8,6 @@ const val PRIMARY_ATTR_STRENGTH = "str"
 const val PRIMARY_ATTR_INTELLECT = "int"
 
 const val NAME_FILE_HEROES = "heroes"
+
+
+const val EXTRA_HERO_PARCELABLE = "EXTRA_HERO_PARCELABLE"

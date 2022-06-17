@@ -1,26 +1,19 @@
 package com.shatokhin.navigheroesdota2
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
-import com.shatokhin.navigheroesdota2.data.models.HeroJson
+import androidx.fragment.app.Fragment
 import com.shatokhin.navigheroesdota2.databinding.ActivityMainBinding
 import com.shatokhin.navigheroesdota2.domain.models.HeroParcelable
-import com.shatokhin.navigheroesdota2.presentation.adapters.AdapterRvHeroes
+import com.shatokhin.navigheroesdota2.presentation.fragments.AboutAppFragment
+import com.shatokhin.navigheroesdota2.presentation.fragments.AllHeroesFragment
+import com.shatokhin.navigheroesdota2.presentation.fragments.DetailsHeroFragment
 import com.shatokhin.navigheroesdota2.presentation.viewmodels.ViewModelListAllHeroes
 import com.shatokhin.navigheroesdota2.presentation.viewmodels.ViewModelListAllHeroesFactory
 
-class MainActivity : AppCompatActivity() {
-    companion object {
-        const val EXTRA_HERO_PARCELABLE = "EXTRA_HERO_PARCELABLE"
-    }
+class MainActivity : AppCompatActivity(), SwitchFragment {
     private val viewModelListAllHeroes: ViewModelListAllHeroes by viewModels { ViewModelListAllHeroesFactory(applicationContext) }
-    private lateinit var adapterRvHeroes: AdapterRvHeroes
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,41 +22,34 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initRecycleView()
-
-        findViewById<Button>(R.id.btnLoadHeroes).setOnClickListener {
-            binding.progressBar.visibility = View.VISIBLE
-            viewModelListAllHeroes.loadListAllHeroes()
-        }
-
-    }
-
-    private fun initRecycleView() {
-        val clickListener = object : AdapterRvHeroes.ClickListenerHero {
-            override fun clickHero(hero: HeroJson) {
-                val heroParcelable = HeroParcelable(hero.name, hero.primaryAttr, hero.attackType, hero.roles, hero.img,
-                    hero.baseHealth, hero.baseMana, hero.baseArmor, hero.baseStrength, hero.baseAgility, hero.baseIntellect)
-
-                val intent = Intent(this@MainActivity, DetailsHeroActivity::class.java)
-                intent.putParcelableArrayListExtra(EXTRA_HERO_PARCELABLE, arrayListOf(heroParcelable))
-                startActivity(intent)
-            }
-        }
-
-        adapterRvHeroes = AdapterRvHeroes(clickListener)
-
-        binding.rvHero.adapter = adapterRvHeroes
-
-        val lmForRvHeroes = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
-        binding.rvHero.layoutManager = lmForRvHeroes
-
-        viewModelListAllHeroes.listHeroJson.observe(this) { listHeroJson ->
-            binding.progressBar.visibility = View.GONE
-            if (listHeroJson.isEmpty()) Toast.makeText(this, "Download error, please repeat later", Toast.LENGTH_LONG).show()
-            adapterRvHeroes.submitList(listHeroJson)
+        if (savedInstanceState == null){ // если это первый запуск
+            supportFragmentManager
+                .beginTransaction()
+                .add(binding.fragmentContainer.id, AllHeroesFragment())
+                .commit()
         }
     }
 
+    override fun showDetailsHero(hero: HeroParcelable) {
+        addNewFragment(DetailsHeroFragment.newInstance(hero), DetailsHeroFragment.TAG)
+    }
 
+    override fun showAboutApp() {
+        addNewFragment(AboutAppFragment(), AboutAppFragment.TAG)
+    }
+
+    private fun addNewFragment(fragment: Fragment, tag: String){
+        supportFragmentManager
+            .beginTransaction()
+            .addToBackStack(tag)
+            .replace(binding.fragmentContainer.id, fragment)
+            .commit()
+    }
+
+}
+
+interface SwitchFragment {
+    fun showDetailsHero(hero: HeroParcelable)
+    fun showAboutApp()
 }
 

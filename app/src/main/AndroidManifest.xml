@@ -27,9 +27,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.shatokhin.navigheroesdota2.DetailsHeroActivity"
-            android:exported="false"/>
-
     </application>
 
 </manifest>

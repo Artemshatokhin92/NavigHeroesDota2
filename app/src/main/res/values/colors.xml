@@ -10,4 +10,5 @@
     <color name="color_for_text_characteristic_hero">#AFAFAF</color>
     <color name="color_for_value_characteristic_hero">#E89B16</color>
     <color name="background_characteristic_hero">#606060</color>
+    <color name="text_about_app">#4EDCFF</color>
 </resources>
